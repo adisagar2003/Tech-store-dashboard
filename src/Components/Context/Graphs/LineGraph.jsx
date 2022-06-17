@@ -21,7 +21,7 @@ function LineGraph() {
 
     <div class='md:scale-100 scale-50 relative md:bottom-[20vh] bottom-[1vh] md:left-0 left-[22vh] ' >
    
-        <ChartComponent title="Sales Analysis" id="charts" primaryXAxis={{valueType:"Category",majorGridLines:{width:0},minorGridLines:{width:0}}} background="#324154" color='white'
+        <ChartComponent title="Sales Analysis" id="charts" primaryXAxis={{valueType:"Category",majorGridLines:{width:0},minorGridLines:{width:0}}} background="#324154" color='white' 
         primaryYAxis={{title:"Sales"}} legendSettings={{visible:true}} >
             <Inject services={[LineSeries,Category,ColumnSeries,Legend]} ></Inject>
             <SeriesCollectionDirective>

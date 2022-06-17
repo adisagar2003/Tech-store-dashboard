@@ -10,6 +10,7 @@ import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
 import About from './Components/About';
 import Charts from './Components/Charts';
+import Orders from './Components/Context/Orders';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/' element={<Dashboard />} /> 
         <Route exact path='/about'element={<About /> } />
         <Route exact path='/charts' element={<Charts />} />
+        <Route exact path='/orders' element={<Orders />} />
 
       </Routes>
       <Sidebar />

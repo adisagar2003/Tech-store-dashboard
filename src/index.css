@@ -11,7 +11,7 @@ html{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,199,199,1) 0%, rgba(181,188,243,1) 99.3% );
 }
 .dark{
- background-color: red;
+background:#19222f;
 }
 
 

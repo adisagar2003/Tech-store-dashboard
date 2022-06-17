@@ -11,7 +11,7 @@ console.log(props,'This is good')
   return (
     <div class={props.open?'ml-[19.5%]':'ml-[0]'} >
     <div class=' transition-all'>
-     <h1 class='text-5xl p-10 font-semibold ml-[19vh] bg-slate-100 dark:bg-slate-700 w-[20%] mt-10 transition-all rounded-2xl shadow-2xl'>
+     <h1 class='text-5xl p-10 font-semibold ml-[19vh] bg-slate-100 dark:text-slate-900 dark:bg-green-300 w-[20%] mt-10 transition-all rounded-2xl shadow-2xl'>
 
      About
      </h1>
@@ -20,7 +20,7 @@ console.log(props,'This is good')
       
      </p>
 
-     <p class='absolute bottom-0 text-slate-600 dark:text-slate-300 ml-[40%]'>
+     <p class='absolute bottom-0 text-slate-600 dark:text-slate-300 ml-[40%] '>
       made by <i>Aditya Sagar</i>, a <span class='font-bold'>full stack</span> dev. 
      </p>
     </div>
