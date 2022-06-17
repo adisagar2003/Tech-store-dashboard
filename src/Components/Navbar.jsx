@@ -103,7 +103,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
       <NavButtons title='Repository for this project' icon={<AiFillGithub class='dark:text-slate-100' />} />
     <div class='float-right pl-[10]vh]'>
       <FormControlLabel
-        control={<MaterialUISwitch id='nightButton' onClick={()=>console.log('Test for dark mode')} sx={{ m: 0}}  />}
+        control={<MaterialUISwitch id='nightButton' onClick={()=>localStorage.setItem('dark','true')} sx={{ m: 0}}  />}
        
       />
  </div>

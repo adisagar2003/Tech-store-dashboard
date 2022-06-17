@@ -11,13 +11,34 @@ import Dashboard from './Components/Dashboard';
 import About from './Components/About';
 import Charts from './Components/Charts';
 import Orders from './Components/Context/Orders';
-function App() {
-  const [count, setCount] = useState(0)
+import {connect } from 'react-redux';
+function mapStateToProps(state){
+  console.log('Dark mode prop',state)
+  return {
+    dark:state
+  }
+}
+var isDark = false;
+function App(props) {
 
+  function getItem(){
+  
+    setInterval(
+
+       isDark =localStorage.getItem('dark')
+     )
+    return isDark
+  }
+
+
+ setInterval(
+
+  getItem(),1000
+ )
   return (
     <div >
-      
-     
+      {console.log(props.dark,'Darkmode')}
+      <div class={isDark?'dark':''}>
       <Navbar />
       <BrowserRouter>
 
@@ -30,6 +51,7 @@ function App() {
       </Routes>
       <Sidebar />
       </BrowserRouter>
+      </div>
 
 
 
@@ -42,4 +64,4 @@ function App() {
   )
 }
 
-export default App
+export default connect(mapStateToProps)(App)

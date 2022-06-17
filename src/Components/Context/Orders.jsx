@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {CalendarComponent} from '@syncfusion/ej2-react-calendars';
 import DataGridDemo from './Graphs/DataGrid';
 
+
 function mapStateToProps(state){
     console.log(state,'MAPSTATE TO PROPS')
     return {
