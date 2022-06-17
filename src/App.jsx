@@ -8,23 +8,33 @@ import Sidebar from './Components/Sidebar';
 import { Provider } from 'react-redux'
 import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
-
+import About from './Components/About';
+import Charts from './Components/Charts';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div >
       
-      <BrowserRouter>
+     
       <Navbar />
-      <Dashboard />
-<Sidebar />
+      <BrowserRouter>
 
+      <Routes>
+        <Route exact path='/' element={<Dashboard />} /> 
+        <Route exact path='/about'element={<About /> } />
+        <Route exact path='/charts' element={<Charts />} />
 
-
-      
-      
+      </Routes>
+      <Sidebar />
       </BrowserRouter>
+
+
+
+
+      
+      
+  
   
     </div>
   )

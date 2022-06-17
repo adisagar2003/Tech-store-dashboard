@@ -7,6 +7,7 @@ import {Routes,Route} from 'react-router-dom'
 import {connect } from 'react-redux';
 import store from './Context/Store';
 import Navbar from './Navbar'
+import {Link} from 'react-router-dom';
 function mapStateToProps(state){
     console.log(state,'MAPSTATETOPROPS')
     return{
@@ -31,10 +32,12 @@ console.log(props,'These are my Props')
 
         <h1 class='dark:text-slate-300 pl-[10vh]  text-xl font-semibold decoration-2  p-10 whitespace-nowrap'><AiOutlineLaptop /><div class='dark:text-white relative left-10 bottom-[3vh] '> Store </div><span class='absolute right-5 top-10'><button  onClick={propHandle}>{props.open?'X':''}</button></span></h1>
 
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-slate-400 dark:text-sky-300'><BiHomeAlt /> Home</a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><AiOutlineShoppingCart /> Orders</a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><AiFillPieChart />Charts</a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><AiFillAccountBook /> About</a>
+
+
+<a class='p-10 pl-[10vh] hover:bg-slate-400 hover:text-green-900  hover:dark:text-slate-800 cursor-pointer transition-all text-slate-600 dark:text-slate-400 dark:text-sky-300'><Link to='/'><BiHomeAlt /> Home</Link></a>
+<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/orders'><AiOutlineShoppingCart /> Orders</Link></a>
+<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/charts'><AiFillPieChart />Charts</Link></a>
+<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/about'><AiFillAccountBook /> About</Link></a>
 
 
     
