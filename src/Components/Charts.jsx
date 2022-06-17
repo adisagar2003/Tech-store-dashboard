@@ -1,9 +1,11 @@
 import React from 'react'
+import LineGraph from './Context/Graphs/LineGraph'
 
 function Charts() {
   return (
     <div>
-    Charts
+    Welome
+    <LineGraph />
     </div>
   )
 }

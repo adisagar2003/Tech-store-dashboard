@@ -1,5 +1,4 @@
-import { Category, ChartComponent, ColumnSeries, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
-
+import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
 
 import React from 'react'
 
@@ -19,18 +18,27 @@ function LineGraph() {
   return (
     <div >
 
-    <div class='md:scale-100 scale-50 relative md:bottom-[20vh] bottom-[1vh] md:left-0 left-[22vh] ' >
-   
-        <ChartComponent title="Sales Analysis" id="charts" primaryXAxis={{valueType:"Category",majorGridLines:{width:0},minorGridLines:{width:0}}} background="#324154" color='white' 
-        primaryYAxis={{title:"Sales"}} legendSettings={{visible:true}} >
-            <Inject services={[LineSeries,Category,ColumnSeries,Legend]} ></Inject>
-            <SeriesCollectionDirective>
-            <SeriesDirective type='Line' dataSource={chartData} xName="month" yName="sales"  ></SeriesDirective>
-            </SeriesCollectionDirective>
-            
-        </ChartComponent>
-      
+<div class='animate-pulse'>
+<SparklineComponent id='sparkline' height='200px' width='500px' axisSettings={{
+            minX: -1, maxX: 7, maxY: 8, minY: -1
+        }} fill='aqua' valueType='Category' xName='x' yName='y' dataSource={[
+            { x: 'January', y: 3 },
+            { x: 'Tue', y: 5 },
+            { x: 'Wed', y: 1},
+            { x: 'Thu', y: 4 },
+            { x: 'Fri', y: 6 },
+        ]} 
+        // To enable tooltip for sparkline
+        tooltipSettings={{
+            visible: true,
+            // formatting tooltip text
+            format: '${x} : ${y}000 sales'
+        }}>
+    <Inject services={[SparklineTooltip]}/>
+</SparklineComponent>
+ 
     </div>
+    <h1 class='ml-[30vh] dark:text-slate-300 text-slate-900'> <u>Sales</u></h1>
     </div>
   )
 }
