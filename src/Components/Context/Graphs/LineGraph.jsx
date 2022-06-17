@@ -21,7 +21,9 @@ function LineGraph(props) {
 <div class='animate-pulse'>
 <SparklineComponent id='sparkline' height='200px' width='500px' axisSettings={{
             minX: -1, maxX: 7, maxY: 8, minY: -1
-        }} fill={props.color} valueType='Category' xName='x' yName='y' dataSource={[
+        }}   markerSettings={{
+          visible: ['All']
+      }} fill={props.color} valueType='Category' xName='x' yName='y' dataSource={[
             { x: 'January', y: 3 },
             { x: 'Tue', y: 5 },
             { x: 'Wed', y: 1},

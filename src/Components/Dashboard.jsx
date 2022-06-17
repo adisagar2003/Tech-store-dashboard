@@ -45,7 +45,7 @@ function Dashboard(props) {
       <span class='text-2xl  font-semibold '>204354$ <code class='text-sm w-4 dark:text-gray-900 text-gray-600 p-3 dark:bg-green-300 rounded-full hover:shadow-2xl transition-all '>Total$</code></span>
       <div class='float-right'>
   
-        <LineGraph color='green' />
+        <LineGraph color='lightgreen' />
       </div>
       <br></br>
       <br></br>

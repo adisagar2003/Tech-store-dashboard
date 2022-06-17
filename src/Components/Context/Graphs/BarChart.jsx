@@ -3,7 +3,7 @@ import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, Line
 function BarChart() {
   return (
     <div>
-      <ChartComponent id='charts' primaryXAxis={{valueType: 'Category'}}>
+      <ChartComponent id='charts' primaryXAxis={{valueType: 'Category'}} width="400" height='300'>
       <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]}/>
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={[
@@ -14,6 +14,7 @@ function BarChart() {
             { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
             { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
         ]} xName='month' yName='sales' type='Column' name='Sales'/>
+
       </SeriesCollectionDirective>
     </ChartComponent>
     </div>
