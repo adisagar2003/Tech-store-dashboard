@@ -2,7 +2,7 @@ import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-re
 
 import React from 'react'
 
-function LineGraph() {
+function LineGraph(props) {
 //Putting the chart data
  let chartData = [
     { month: 'Jan', sales: 35 }, { month: 'Feb', sales: 28 },
@@ -21,7 +21,7 @@ function LineGraph() {
 <div class='animate-pulse'>
 <SparklineComponent id='sparkline' height='200px' width='500px' axisSettings={{
             minX: -1, maxX: 7, maxY: 8, minY: -1
-        }} fill='aqua' valueType='Category' xName='x' yName='y' dataSource={[
+        }} fill={props.color} valueType='Category' xName='x' yName='y' dataSource={[
             { x: 'January', y: 3 },
             { x: 'Tue', y: 5 },
             { x: 'Wed', y: 1},

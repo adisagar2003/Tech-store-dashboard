@@ -30,7 +30,7 @@ function Dashboard(props) {
 
         </div>
 
-        <div class='  ml-[10%] mt-[2%] dark:bg-slate-700 bg-slate-400 dark:text-white w-[80%] h-[60vh] rounded-xl  p-10 font-semibold overflow-hidden'> Recent Updates
+        <div class='  ml-[10%] mt-[2%] dark:bg-slate-700 bg-slate-300 dark:text-white w-[80%] h-[60vh] rounded-xl  p-10 font-semibold overflow-hidden'> Recent Updates
         
       {/*planning data for the dashboard
       Total revenue- gets a card
@@ -45,7 +45,7 @@ function Dashboard(props) {
       <span class='text-2xl  font-semibold '>204354$ <code class='text-sm w-4 dark:text-gray-900 text-gray-600 p-3 dark:bg-green-300 rounded-full hover:shadow-2xl transition-all '>Total$</code></span>
       <div class='float-right'>
   
-        <LineGraph />
+        <LineGraph color='green' />
       </div>
       <br></br>
       <br></br>
