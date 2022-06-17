@@ -8,6 +8,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import {connect} from 'react-redux';
+import useDarkMode from './Hooks/useDarkMode';
 function mapStateToProps(state){
   console.log(state,'MAPSTATETOPROPS')
   return{
@@ -19,8 +20,18 @@ function mapStateToProps(state){
 function Navbar(props) {
   
   //Toggle dark and light mode 
+  const [isDark,setDark] = useState(false)
   
-  
+  const [colorTheme,setTheme] = useDarkMode();
+
+
+  const toggleDark = ()=>{
+    setDark(!isDark)
+    console.log('darkMode',isDark)
+    localStorage.setItem('dark',isDark)
+  }
+
+
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -103,7 +114,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
       <NavButtons title='Repository for this project' icon={<AiFillGithub class='dark:text-slate-100' />} />
     <div class='float-right pl-[10]vh]'>
       <FormControlLabel
-        control={<MaterialUISwitch id='nightButton' onClick={()=>localStorage.setItem('dark','true')} sx={{ m: 0}}  />}
+        control={<MaterialUISwitch id='nightButton' onClick={()=>setTheme(colorTheme)} sx={{ m: 0}}  />}
        
       />
  </div>

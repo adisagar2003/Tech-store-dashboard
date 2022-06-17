@@ -26,17 +26,14 @@ function App(props) {
     setInterval(
 
        isDark =localStorage.getItem('dark')
-     )
+     ,1000)
     return isDark
   }
 
 
- setInterval(
 
-  getItem(),1000
- )
   return (
-    <div >
+    <div class='transition-all' >
       {console.log(props.dark,'Darkmode')}
       <div class={isDark?'dark':''}>
       <Navbar />
