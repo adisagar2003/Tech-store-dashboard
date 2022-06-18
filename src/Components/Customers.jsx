@@ -1,5 +1,8 @@
 import React from 'react'
 import {connect } from 'react-redux';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import { DataGrid } from '@mui/x-data-grid';
 function mapStateToProps(state){
 return {
     open:state
@@ -10,9 +13,13 @@ function Customers(props) {
     <div class={props.open?'p-10 ml-[40vh]':'p-10'}>
       <div class='p-4 pl-[10vh] pb-[1vh] w-[100%] h-[10vh] bg-slate-200 dark:bg-slate-700 dark:text-slate-200 text-slate-900'>
     <h1 class='text-xl font-semibold'>Customers</h1>
+    <DataGrid data={{}} columnBuffer={2} columnThreshold={2} />
       </div>
      <div class='mt-10 w-[100%] p-4 dark:bg-slate-500 bg-slate-200'>
-       a
+     <div class='p-4 pl-[10vh] pb-[1vh] w-[100%] h-[10vh] bg-slate-200 dark:bg-slate-700 dark:text-slate-200 text-slate-900'>
+
+      </div>
+    
      </div>
     </div>
   )
