@@ -40,7 +40,7 @@ function LineGraph(props) {
 </SparklineComponent>
  
     </div>
-    <h1 class='ml-[30vh] dark:text-slate-300 text-slate-900'> <u>Sales</u></h1>
+   
     </div>
   )
 }

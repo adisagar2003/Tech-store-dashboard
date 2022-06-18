@@ -15,6 +15,7 @@ import {connect } from 'react-redux';
 import Customers from './Components/Customers';
 import Product from './Components/Product';
 import Staff from './Components/Staff';
+import Sparkline from './Components/GraphComponents/Sparkline';
 function mapStateToProps(state){
   console.log('Dark mode prop',state)
   return {
@@ -50,6 +51,7 @@ function App(props) {
         <Route exact path='/customers' element={<Customers />} />
         <Route exact path='/products' element={<Product />} />`
         <Route exact path='/staff' element={<Staff />} /> 
+        <Route exact path='/sparkline' element={<Sparkline />} />
 
       </Routes>
       <Sidebar />
