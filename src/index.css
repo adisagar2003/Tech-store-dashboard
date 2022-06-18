@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";  
 body{
     margin: 0;
     padding:0;
@@ -19,6 +19,22 @@ background:#19222f;
 
 
 
+
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track {
+    background: #3737370c; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  ::-webkit-scrollbar-button{
+
+  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
