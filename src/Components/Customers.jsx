@@ -71,8 +71,7 @@ function Customers(props) {
      <div class='p-4 pl-[10vh] pb-[1vh] w-[100%] h-[70vh] bg-slate-200 dark:bg-slate-700 dark:text-slate-200 text-slate-900'>
      <Box sx={{ height: 400, width: '100%' , background:'#1f1f1f',textDecorationColor:'white'
      }}>
-      
-      <DataGrid
+      {colorTheme=='light'?  <DataGrid
       textDecorationColor='white' 
       sx={{
         color:'white'
@@ -86,7 +85,22 @@ function Customers(props) {
         disableSelectionOnClick
        
 
-      />
+      />: <DataGrid
+      textDecorationColor='white' 
+      sx={{
+        color:'black'
+      }}
+        rows={rows}
+        columns={columns}
+
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+        checkboxSelection
+        disableSelectionOnClick
+       
+
+      />}
+     
     </Box>
       </div>
     
