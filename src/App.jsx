@@ -4,7 +4,7 @@ import './App.css'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Test1 from './Components/Test1';
 import Sidebar from './Components/Sidebar';
-
+import BarComponent from './Components/GraphComponents/BarComponent';
 import { Provider } from 'react-redux'
 import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
@@ -16,6 +16,7 @@ import Customers from './Components/Customers';
 import Product from './Components/Product';
 import Staff from './Components/Staff';
 import Sparkline from './Components/GraphComponents/Sparkline';
+import Stocks from './Components/GraphComponents/Stocks';
 function mapStateToProps(state){
   console.log('Dark mode prop',state)
   return {
@@ -52,7 +53,8 @@ function App(props) {
         <Route exact path='/products' element={<Product />} />`
         <Route exact path='/staff' element={<Staff />} /> 
         <Route exact path='/sparkline' element={<Sparkline />} />
-
+      <Route exact path='/barchart' element={<BarComponent /> } />
+      <Route exact path='/stocks' element={<Stocks />} />
       </Routes>
       <Sidebar />
       </BrowserRouter>
