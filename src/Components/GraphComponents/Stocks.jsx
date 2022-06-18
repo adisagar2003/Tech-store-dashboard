@@ -1,7 +1,7 @@
 import React from 'react'
 import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, Inject, DateTime, Tooltip, RangeTooltip, Crosshair, LineSeries, SplineSeries, CandleSeries, HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines } from '@syncfusion/ej2-react-charts';
 import { EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export } from '@syncfusion/ej2-react-charts';
-import { data } from './datasource';
+
 function Stocks() {
     let data= [{
         "x": new Date('2012-04-02T00:00:00.000Z'),
@@ -47,7 +47,13 @@ function Stocks() {
             EmaIndicator, RsiIndicator, BollingerBands, TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, Export,
             AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator]}/>
             <StockChartSeriesCollectionDirective>
-                <StockChartSeriesDirective dataSource={data}  type='Candle'>
+                <StockChartSeriesDirective dataSource={{
+        "x": new Date('2012-04-05T00:00:00.000Z'),
+        "open": 316.436432,
+        "high": 318.533539,
+        "low": 314.599609,
+        
+    }}  type='Candle'>
                 </StockChartSeriesDirective>
             </StockChartSeriesCollectionDirective>
         </StockChartComponent>

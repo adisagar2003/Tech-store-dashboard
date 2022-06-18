@@ -15,7 +15,20 @@ function Staff(props) {
         
     <div class='p-3 dark:bg-slate-800 bg-slate-200 text-slate-900 dark:text-slate-200     text-2xl font-semibold h-[70vh]'>Staff
     <div class='p-3 flex flex-auto '>
-    
+      <div class='p-10'>
+    <Avatar  />
+    <div class='ml-10 relative left-[1vh]  bottom-[5vh]'>Aditya Sagar</div>
+    </div>
+    <div class='p-10'>
+    <Avatar  />
+    <div class='ml-10 relative left-[1vh]  bottom-[5vh]'>Robert Smith</div>
+    </div>
+    <div class='p-10'>
+    <Avatar  />
+    <div class='ml-10 relative left-[1vh]  bottom-[5vh]'>James Bond</div>
+    </div>
+
+
     </div>
     <br>
     </br>
