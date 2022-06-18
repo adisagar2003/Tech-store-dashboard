@@ -113,10 +113,12 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
       <NavButtons title='Top deals' icon={<AiFillSketchSquare class='dark:text-slate-100' />} />
       <NavButtons title='Repository for this project' icon={<AiFillGithub class='dark:text-slate-100' />} />
     <div class='float-right pl-[10]vh]'>
+    <button  onClick={()=>setTheme(colorTheme)} >
       <FormControlLabel
-        control={<MaterialUISwitch id='nightButton' onClick={()=>setTheme(colorTheme)} sx={{ m: 0}}  />}
+        control={<MaterialUISwitch id='nightButton' sx={{ m: 0}}  />}
+
        
-      />
+      /></button>
  </div>
     </div>
   )

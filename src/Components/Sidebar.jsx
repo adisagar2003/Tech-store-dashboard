@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import {AiFillAccountBook, AiFillCaretLeft, AiFillDownCircle, AiFillLeftSquare, AiFillPieChart, AiOutlineLaptop} from 'react-icons/ai'
+import {AiFillAccountBook, AiFillCaretLeft, AiFillDownCircle, AiFillLeftCircle, AiFillLeftSquare, AiFillPieChart, AiFillRightCircle, AiOutlineLaptop} from 'react-icons/ai'
 import {AiFillCaretRight} from 'react-icons/ai'
 import {BiHomeAlt} from 'react-icons/bi'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
@@ -17,7 +17,7 @@ function mapStateToProps(state){
 
 function Sidebar(props) {
 
-  const [showSubMenu,setSubMenu] = useState('false')
+  const [showSubMenu,setSubMenu] = useState(false)
 
 
 const propHandle = ()=>{
@@ -32,12 +32,12 @@ console.log(props,'These are my Props')
 
         <h1 class='dark:text-slate-300 pl-[10vh]  text-xl font-semibold decoration-2  p-10 whitespace-nowrap'><AiOutlineLaptop /><div class='dark:text-white relative left-10 bottom-[3vh] '> Store </div><span class='absolute right-5 top-10'><button  onClick={propHandle}>{props.open?'X':''}</button></span></h1>
 
+    
 
-
-<a class='p-10 pl-[10vh] hover:bg-slate-400 hover:text-green-900  hover:dark:text-slate-800 cursor-pointer transition-all text-slate-600 dark:text-slate-400 dark:text-sky-300'><Link to='/'><BiHomeAlt /> Home</Link></a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/orders'><AiOutlineShoppingCart /> Orders</Link></a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/charts'><AiFillPieChart />Charts</Link></a>
-<a class='p-10 pl-[10vh] hover:bg-slate-400 cursor-pointer transition-all text-slate-600 dark:text-sky-300'><Link to='/about'><AiFillAccountBook /> About</Link></a>
+<a class='p-10 pl-[10vh] hover:dark:bg-slate-900 hover:bg-slate-400 hover:text-green-900  hover:dark:text-slate-300 cursor-pointer transition-all text-slate-600 dark:text-slate-400 dark:text-sky-300'><Link to='/'><BiHomeAlt /> Home</Link></a>
+<a  class='p-10 pl-[10vh] hover:bg-slate-400 hover:dark:bg-slate-900 cursor-pointer transition-all text-slate-600 dark:text-sky-300' onClick={()=>setSubMenu(!showSubMenu)}><Link to='/orders' ><AiOutlineShoppingCart  /> Orders</Link> <br></br>{showSubMenu?<div class='flex p-4 pl-[5vh] flex-col p-4'><a class='dark:text-green-300 p-10 hover:bg-blue-900 rounded-full text-green-600  p-1'>  <AiFillRightCircle /><Link to='/customers'>Customers</Link></a><a class=' p-1 hover:bg-blue-700  dark:text-green-300 text-green-600 rounded-full  '><AiFillRightCircle /><Link to='/staff'>Staff</Link></a><a class='p-1 hover:bg-blue-600 rounded-full  dark:text-green-300 text-green-600 '><AiFillRightCircle /><Link to='/products'>Products</Link></a></div>:<a></a>}</a>
+<a class='p-10 pl-[10vh] hover:dark:bg-slate-900 cursor-pointer transition-all hover:bg-slate-400 text-slate-600 dark:text-sky-300'><Link to='/charts'><AiFillPieChart />Charts</Link></a>
+<a class='p-10 pl-[10vh] hover:dark:bg-slate-900 cursor-pointer transition-all hover:bg-slate-400 text-slate-600 dark:text-sky-300'><Link to='/about'><AiFillAccountBook /> About</Link></a>
 
 
 

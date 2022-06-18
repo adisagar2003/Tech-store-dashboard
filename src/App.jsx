@@ -12,6 +12,7 @@ import About from './Components/About';
 import Charts from './Components/Charts';
 import Orders from './Components/Context/Orders';
 import {connect } from 'react-redux';
+import Customers from './Components/Customers';
 function mapStateToProps(state){
   console.log('Dark mode prop',state)
   return {
@@ -44,6 +45,7 @@ function App(props) {
         <Route exact path='/about'element={<About /> } />
         <Route exact path='/charts' element={<Charts />} />
         <Route exact path='/orders' element={<Orders />} />
+        <Route exact path='/customers' element={<Customers />} />
 
       </Routes>
       <Sidebar />
